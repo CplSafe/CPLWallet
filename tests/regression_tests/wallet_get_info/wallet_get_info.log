@@ -1,0 +1,29 @@
+default (unlocked) >>> help wallet_get_info
+Usage:
+wallet_get_info                                                                                       Extra information about the wallet.
+Extra information about the wallet.
+
+Parameters:
+  (none)
+
+Returns:
+  json_object
+default (unlocked) >>> wallet_get_info
+{
+  "data_dir": "<d-ign></d-ign>",
+  "num_scanning_threads": "<d-ign></d-ign>",
+  "open": true,
+  "name": "default",
+  "automatic_backups": false,
+  "transaction_scanning_enabled": false,
+  "last_scanned_block_num": null,
+  "last_scanned_block_timestamp": null,
+  "transaction_fee": "0.50000 XTS",
+  "transaction_expiration_secs": 3600,
+  "unlocked": true,
+  "unlocked_until": "<d-ign></d-ign>",
+  "unlocked_until_timestamp": "<d-ign></d-ign>",
+  "scan_progress": "100.00 %",
+  "version": "<d-ign></d-ign>"
+}
+default (unlocked) >>> quit

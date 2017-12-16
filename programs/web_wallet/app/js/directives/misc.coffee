@@ -1,0 +1,124 @@
+angular.module("app.directives").directive "focusMe", ($timeout) ->
+    scope:
+        trigger: "@focusMe"
+    link: (scope, element) ->
+        scope.$watch "trigger", ->
+            $timeout ->
+                element[0].focus()
+
+angular.module("app.directives").directive "pwCheck", ->
+    require: "ngModel"
+    link: (scope, elem, attrs, ctrl) ->
+        firstPassword = "#" + attrs.pwCheck
+        elem.add(firstPassword).on "keyup", ->
+            scope.$apply ->
+                v = elem.val() is $(firstPassword).val()
+                ctrl.$setValidity "pwmatch", v
+
+angular.module("app.directives").directive "myNgEnter", ->
+    (scope, element, attrs) ->
+        element.bind "keydown keypress", (event) ->
+            if event.which is 13
+                scope.$apply ->
+                    scope.$eval attrs.myNgEnter
+
+
+angular.module("app.directives").directive "uncapitalize", ->
+    require: "ngModel"
+    link: (scope, element, attrs, modelCtrl) ->
+        uncapitalize = (inputValue) ->
+            if inputValue == undefined
+                return inputValue
+            uncapitalized = inputValue.toLowerCase()
+            if uncapitalized isnt inputValue
+                modelCtrl.$setViewValue uncapitalized
+                modelCtrl.$render()
+            uncapitalized
+
+        modelCtrl.$parsers.push uncapitalize
+        uncapitalize scope[attrs.ngModel] # uncapitalize initial value
+        return
+
+angular.module("app.directives").directive "numonly", ->
+    require: "ngModel"
+    link: (scope, element, attr, ngModelCtrl) ->
+        fromUser = (text) ->
+            transformedInput = text.replace(/[^0-9]/g, "")
+            if transformedInput isnt text
+                element.css('background-color', 'pink');
+                setTimeout (->
+                    element.css('background-color', 'none');
+                ), 500
+                ngModelCtrl.$setViewValue transformedInput
+                ngModelCtrl.$render()
+            transformedInput
+        ngModelCtrl.$parsers.push fromUser
+        return
+
+angular.module("app.directives").directive "decimalonly", ->
+    require: "ngModel"
+    link: (scope, element, attr, ngModelCtrl) ->
+        fromUser = (text) ->
+            transformedInput = text.replace(/[^0-9\.]/g, "")
+            if transformedInput isnt text
+                element.css('background-color', 'pink');
+                setTimeout (->
+                    element.css('background-color', 'none');
+                ), 500
+                ngModelCtrl.$setViewValue transformedInput
+                ngModelCtrl.$render()
+            transformedInput
+        ngModelCtrl.$parsers.push fromUser
+        return
+
+angular.module("app.directives").directive "loadingIndicator", ->
+    restrict: "A"
+    replace: true
+    scope: false
+    template: """
+      <div ng-show="loading_indicator.show" class="loading-overlay" ng-class="{'with-progress': loading_indicator.progress}">
+        <div class="loading-panel">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          <div class="progress-indicator"><span>{{loading_indicator.progress}}</span></div>
+        </div>
+      </div>
+    """
+
+angular.module("app.directives").directive "watchChange", ->
+    scope:
+        onchange: '&watchChange'
+    link: (scope, element, attrs) ->
+        element.on 'input', ->
+            scope.$apply ->
+                scope.onchange()
+
+angular.module("app.directives").directive "focus", ($timeout) ->
+    link: (scope, element) ->
+        $timeout -> element[0].focus()
+
+angular.module("app.directives").directive "ngSortFa", () ->
+    restrict: 'E',
+    scope:
+        'orderString': '@',
+        'orderByField': '@',
+        'reverseSort': '@'
+    templateUrl: 'ng-sort-template.html'
+
+angular.module("app.directives").directive "accountNameWithId", () ->
+    restrict: 'E',
+    scope:
+        'name': '=',
+        'accountId': '='
+        'registrationDate': '='
+    template: '''
+        <div class="account-name-with-id">
+            <span class="account-name" tooltip="{{'account.name'|translate}}">{{name}}</span>
+            <span ng-show="accountId" class="account-id" tooltip="{{'account.id'|translate}}">#{{accountId}}</span>
+            <span ng-show="!accountId" class="account-id" translate>account.unregistered</span>
+            <div class="registration-date" ng-show="registrationDate"><span translate>account.registered</span> {{registrationDate | prettyDate:'short'}}</div>
+        </div>
+    '''

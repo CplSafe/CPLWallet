@@ -1,0 +1,26 @@
+<div class="modal-header bg-danger">
+  <h3 class="modal-title" translate>account.rename_account</h3>
+</div>
+<form ng-submit="ok()">
+    <div class="modal-body">
+        <div class="row">
+            <div class='col-sm-4'>
+              <identicon account="{{m.newname}}" size="150"/>
+            </div>
+
+            <div class='col-sm-8'>
+                <div>
+                <input-account-name autofocus ng-model="m.newname" form-name="createaccount"/>
+                </div>
+                <br>
+                <div class="lead">
+                  {{ 'tip.rename_account_name_existed' | translate:m.translate_data }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-disabled='m.oldname == m.newname' translate>btn.ok</button>
+        <button class="btn btn-warning" ng-click="cancel()" translate>btn.cancel</button>
+    </div>
+</form>

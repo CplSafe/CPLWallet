@@ -1,0 +1,38 @@
+(wallet closed) >>> help blockchain_get_info
+Usage:
+blockchain_get_info                                                                                   Returns current blockchain information and parameters
+Returns current blockchain information and parameters
+
+Parameters:
+  (none)
+
+Returns:
+  json_object
+
+aliases: getconfig, get_config, config, blockchain_get_config
+(wallet closed) >>> blockchain_get_info
+{
+  "blockchain_id": "3e80fbf67b66befeae1e4abd8528527f56a8fade890634e643998f1fcfa83314",
+  "name": "BitShares XTS",
+  "symbol": "XTS",
+  "address_prefix": "XTS",
+  "db_version": "<d-ign>191</d-ign>",
+  "genesis_timestamp": "<d-ign>2014-06-20T14:40:27</d-ign>",
+  "block_interval": 10,
+  "delegate_num": 101,
+  "max_delegate_pay_issued_per_block": "50.00000 XTS",
+  "max_delegate_reg_fee": "59,881.18811 XTS",
+  "name_size_max": 63,
+  "memo_size_max": 51,
+  "symbol_size_max": 8,
+  "symbol_size_min": 3,
+  "asset_shares_max": 1000000000000000,
+  "short_symbol_asset_reg_fee": "500,000.00000 XTS",
+  "long_symbol_asset_reg_fee": "5,000.00000 XTS",
+  "statistics_enabled": true,
+  "relay_fee": "0.10000 XTS",
+  "max_pending_queue_size": 10,
+  "max_trx_per_second": 1,
+  "min_block_fee": "0.00000 XTS"
+}
+(wallet closed) >>> quit

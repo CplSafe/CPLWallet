@@ -1,0 +1,9 @@
+Due to stability issues with recent versions of the toolkit, a Python script was created to act as a watchdog over the delegate and verify that it is running and ready to sign blocks. This script connects to the delegate's RPC server and inspects the status of the node, verifying that it is ready to sign blocks, and takes any necessary steps to ready it if not. To help alleviate the instability of the client, delegate nodes are recommended to run without accepting incoming connections and with a low maximum connection count, which reduces the frequency of crashes.
+
+The script should be configured with the RPC server information of the delegate as well as the name of the wallet which contains the delegate accounts. The delegate node being watched should be run in an infinite shell loop, such as `while true; do bitshares_client --max-connections 20 --accept-incoming-connections 0; done;` to ensure that it restarts automatically after a crash. The watchdog will then prepare it to sign blocks again once it finishes starting. The script prompts for the wallet passphrase once when it first starts, then holds it in RAM while running so that the passphrase never needs to be stored on disk.
+
+Optimally, the delegate node and watchdog will each run in an instance of `screen` so they can be run unattended in the background.
+
+To use the watchdog script, edit the delegate node's `config.json` file so that the RPC server is enabled and listening on a known port. Configure the watchdog with the appropriate RPC server connection and authentication information before running it. Note that the watchdog uses the raw TCP RPC interface, not the HTTP RPC interface.
+
+The watchdog script is available here: https://github.com/BitShares/bitshares_toolkit/blob/develop/programs/utils/watchdog.py

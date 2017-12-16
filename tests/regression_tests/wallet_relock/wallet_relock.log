@@ -1,0 +1,90 @@
+default (unlocked) >>> debug_filter_output_for_tests true
+OK
+default (unlocked) >>> wallet_lock
+OK
+default (locked) >>> wallet_get_info
+{
+  "data_dir": "<d-ign></d-ign>",
+  "num_scanning_threads": "<d-ign></d-ign>",
+  "open": true,
+  "name": "default",
+  "automatic_backups": false,
+  "transaction_scanning_enabled": false,
+  "last_scanned_block_num": null,
+  "last_scanned_block_timestamp": null,
+  "transaction_fee": "0.50000 XTS",
+  "transaction_expiration_secs": 3600,
+  "unlocked": false,
+  "unlocked_until": null,
+  "unlocked_until_timestamp": null,
+  "scan_progress": null,
+  "version": "<d-ign></d-ign>"
+}
+default (locked) >>> help wallet_unlock
+Usage:
+wallet_unlock <timeout> <passphrase>                                                                  Unlock the private keys in the wallet to enable spending operations
+Unlock the private keys in the wallet to enable spending operations
+
+Parameters:
+  timeout (uint32_t, required): the number of seconds to keep the wallet unlocked
+  passphrase (passphrase, required): the passphrase for encrypting the wallet
+
+Returns:
+  void
+
+aliases: unlock, walletpassphrase
+default (locked) >>> wallet_unlock -1 123456789
+Command failed with exception: invalid timeout (20020)
+Timeout too large!
+
+
+
+
+default (locked) >>> wallet_unlock 0 123456789
+Command failed with exception: invalid timeout (20020)
+Invalid timeout!
+
+
+
+
+default (locked) >>> wallet_unlock 5 password
+OK
+default (unlocked) >>> wallet_get_info
+{
+  "data_dir": "<d-ign></d-ign>",
+  "num_scanning_threads": "<d-ign></d-ign>",
+  "open": true,
+  "name": "default",
+  "automatic_backups": false,
+  "transaction_scanning_enabled": false,
+  "last_scanned_block_num": null,
+  "last_scanned_block_timestamp": null,
+  "transaction_fee": "0.50000 XTS",
+  "transaction_expiration_secs": 3600,
+  "unlocked": true,
+  "unlocked_until": "<d-ign>5 seconds in the future</d-ign>",
+  "unlocked_until_timestamp": "<d-ign></d-ign>",
+  "scan_progress": "100.00 %",
+  "version": "<d-ign>110</d-ign>"
+}
+default (unlocked) >>> debug_wait 6
+OK
+default (locked) >>> wallet_get_info
+{
+  "data_dir": "<d-ign></d-ign>",
+  "num_scanning_threads": "<d-ign></d-ign>",
+  "open": true,
+  "name": "default",
+  "automatic_backups": false,
+  "transaction_scanning_enabled": false,
+  "last_scanned_block_num": null,
+  "last_scanned_block_timestamp": null,
+  "transaction_fee": "0.50000 XTS",
+  "transaction_expiration_secs": 3600,
+  "unlocked": false,
+  "unlocked_until": null,
+  "unlocked_until_timestamp": null,
+  "scan_progress": null,
+  "version": "<d-ign></d-ign>"
+}
+default (locked) >>> quit

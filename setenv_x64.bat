@@ -1,0 +1,20 @@
+@echo off
+set BITSHARES_ROOT=F:\bitshares
+echo Using %BITSHARES_ROOT% as Bitshares root directory
+
+set OPENSSL_ROOT=%BITSHARES_ROOT%\OpenSSL.x64
+set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
+set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
+set DBROOTDIR=%BITSHARES_ROOT%\BerkeleyDB.x64
+set QTDIR=%BITSHARES_ROOT%\QT.x64
+set ICUROOT=%BITSHARES_ROOT%\ICU.x64
+set BOOST_ROOT=%BITSHARES_ROOT%\boost_1.55.x64
+set TCL_ROOT=%BITSHARES_ROOT%\tcl.x64
+set NPM_INSTALL_PREFIX=%BITSHARES_ROOT%\npm
+
+set PATH=%NPM_INSTALL_PREFIX%;"%APPDATA%"\npm;%QTDIR%\bin;%ICUROOT%\bin;%ICUROOT%\lib;%BITSHARES_ROOT%\bin;%TCL_ROOT%\bin;%BITSHARES_ROOT%\Cmake\bin;%BOOST_ROOT%\stage\lib;%PATH%
+set CMAKE_PREFIX_PATH=%QTDIR%
+set QT_QPA_PLATFORM_PLUGIN_PATH=%QTDIR%\plugins\platforms
+
+echo Setting up VS2013 environment...
+call "%VS120COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64

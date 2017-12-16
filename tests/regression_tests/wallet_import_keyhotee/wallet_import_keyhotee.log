@@ -1,0 +1,57 @@
+default (unlocked) >>> help wallet_import_keyhotee
+Usage:
+wallet_import_keyhotee <firstname> <middlename> <lastname> <brainkey> <keyhoteeid>                    Create the key from keyhotee config and import it to the wallet, creating a new account using this key
+Create the key from keyhotee config and import it to the wallet, creating a new account using this key
+
+Parameters:
+  firstname (name, required): first name in keyhotee profile config, for salting the seed of private key
+  middlename (name, required): middle name in keyhotee profile config, for salting the seed of private key
+  lastname (name, required): last name in keyhotee profile config, for salting the seed of private key
+  brainkey (brainkey, required): brainkey in keyhotee profile config, for salting the seed of private key
+  keyhoteeid (keyhoteeid, required): using keyhotee id as account name
+
+Returns:
+  void
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" t
+OK
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" tk
+OK
+default (unlocked) >>> wallet_list_accounts
+NAME (* delegate)                  KEY                                                             REGISTERED            BLOCK PRODUCTION ENABLED 
+t                                  XTS7oMboDBn8pTZogfNzExSChkoi3Hu5PVDsxZ2JfUVMtm3HPMmZA           NO                    N/A                      
+tk                                 XTS6uwp4C9NjmmrELUrV6a6Ppu52L7kfJVFxeUx8Legpu7iTNoPiL           NO                    N/A                      
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" tk
+OK
+default (unlocked) >>> wallet_list_accounts
+NAME (* delegate)                  KEY                                                             REGISTERED            BLOCK PRODUCTION ENABLED 
+t                                  XTS7oMboDBn8pTZogfNzExSChkoi3Hu5PVDsxZ2JfUVMtm3HPMmZA           NO                    N/A                      
+tk                                 XTS6uwp4C9NjmmrELUrV6a6Ppu52L7kfJVFxeUx8Legpu7iTNoPiL           NO                    N/A                      
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" tk
+OK
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" tk1
+OK
+default (unlocked) >>> wallet_list_accounts
+NAME (* delegate)                  KEY                                                             REGISTERED            BLOCK PRODUCTION ENABLED 
+t                                  XTS7oMboDBn8pTZogfNzExSChkoi3Hu5PVDsxZ2JfUVMtm3HPMmZA           NO                    N/A                      
+tk                                 XTS6uwp4C9NjmmrELUrV6a6Ppu52L7kfJVFxeUx8Legpu7iTNoPiL           NO                    N/A                      
+tk1                                XTS5qYY4voJHZwBPSoy7GaE8zyiABApqk6MjMpdesRryk4cNC3HN2           NO                    N/A                      
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" tk1*
+Command failed with exception: invalid account name (20017)
+Invalid Keyhotee name!
+
+
+
+
+default (unlocked) >>> wallet_import_keyhotee F M L "Hello World123$$$" t*
+Command failed with exception: invalid account name (20017)
+Invalid Keyhotee name!
+
+
+
+
+default (unlocked) >>> wallet_list_accounts
+NAME (* delegate)                  KEY                                                             REGISTERED            BLOCK PRODUCTION ENABLED 
+t                                  XTS7oMboDBn8pTZogfNzExSChkoi3Hu5PVDsxZ2JfUVMtm3HPMmZA           NO                    N/A                      
+tk                                 XTS6uwp4C9NjmmrELUrV6a6Ppu52L7kfJVFxeUx8Legpu7iTNoPiL           NO                    N/A                      
+tk1                                XTS5qYY4voJHZwBPSoy7GaE8zyiABApqk6MjMpdesRryk4cNC3HN2           NO                    N/A                      
+default (unlocked) >>> quit

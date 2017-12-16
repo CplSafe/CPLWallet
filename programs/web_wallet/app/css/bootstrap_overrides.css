@@ -1,0 +1,121 @@
+.table > thead > tr > th {
+	color: #aaa;
+}
+
+.panel {
+ padding-bottom: 0;
+}
+
+.popover {
+  max-width: 476px;
+}
+
+.input-group-btn {
+	font-size: 100%;
+}
+
+.bg-primary {
+	background-color: #1B6FC1;
+}
+
+.btn-primary[disabled] {
+	background-color: #eee;
+	color: #888;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+	color: #1B6FC1;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+.navbar-main .navbar-nav > li > .dropdown-menu li.active > a {
+	padding-right: 20px;
+  border-right: solid 3px #1B6FC1;
+  color: #1B6FC1;
+  background-color: #f5f5f5;
+}
+
+.nav-tabs > li.active > a:hover {
+	color: #1B6FC1;
+	border-bottom: 1px solid #fff;
+}
+
+.nav-tabs > li > a{
+	color: black;
+}
+
+.nav-tabs > li.active > a {
+	color: #1B6FC1;
+	border-bottom: 1px solid #fff;
+}
+
+.has-error .input-group-addon, .input-group-addon {
+	border: none;
+	color: #777;
+	width: 80px;
+}
+
+.input-group-addon {
+	font-size: 12px;
+}
+
+input[type="checkbox"] {
+	width: 20px;
+	position: relative;
+	bottom: 3px;
+}
+
+.navbar {
+  min-height: 36px;
+  height: 36px;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+	user-select: none;
+}
+
+.modal-footer {
+	margin-top: 0;
+}
+
+.header .header-title {
+	text-shadow: none;
+	padding-bottom: 2px;
+}
+
+.form-group.vertical-lable {
+	margin-bottom: 2px;
+}
+
+.text-muted:hover {
+	color: #c4c4c4;
+}
+
+.text-primary:hover {
+	color: #1B6FC1;
+}
+
+
+.text-warning {
+	color: #d0a66a;
+}
+
+.text-warning:hover {
+	color: #d0a66a;
+}
+
+.text-danger:hover {
+	color: #d97572;
+}
+
+.text-success:hover {
+	color: #71c671;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.tooltip.top {
+	max-width: 240px;
+}

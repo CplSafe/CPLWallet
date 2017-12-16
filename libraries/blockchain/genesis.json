@@ -1,0 +1,340 @@
+{
+  "timestamp": "2015-05-31T16:00:00",
+  "market_assets": [],
+  "delegates": [{
+      "name": "gop0",
+      "owner": "BTS88CL2gVMXUFW1oDLa4jDyVuPiduW7aRe4UHs85VrxdbZdicr8y"
+    },{
+      "name": "gop1",
+      "owner": "BTS7qLujBbyZH9fZ5a5mYvgddrXDHh2efxxE8FsYxiSsf5qhamFVR"
+    },{
+      "name": "gop2",
+      "owner": "BTS6yZLgJkozTwki3UjN1hVDmgAzkCcah8crTK7FNN3bq7pHAEcRa"
+    },{
+      "name": "gop3",
+      "owner": "BTS5jEW1QP4ZMof8c46mf2uE7mofEFV9SAXS4ZrfpUmmwyVdvqJmU"
+    },{
+      "name": "gop4",
+      "owner": "BTS5YoyqhgR6mkgxosDRDyMZQ2jo18HAjcf39TPKzDQ1FwVrev26e"
+    },{
+      "name": "gop5",
+      "owner": "BTS5KtrUNJWR89Wgky5CyWNJnGTyY6vY1gKtt1PvEzbDcHXDpMSze"
+    },{
+      "name": "gop6",
+      "owner": "BTS57wdAj7jtj7xE2uhzWZb8ZBWrSYMEkdAiMapoik9SrniibpzPk"
+    },{
+      "name": "gop7",
+      "owner": "BTS8fKBuAYVVighiwYxsUwodSaEifwGQkp2pqus92WruVRxrXEWz7"
+    },{
+      "name": "gop8",
+      "owner": "BTS5D1iDXvnpso63fFDNsVpzJwUrkb83i6YT1ehMweqKZDLmSXWY5"
+    },{
+      "name": "gop9",
+      "owner": "BTS6cYAPoATymz3X9ZRZsq3xL4c6GwmMdVj5dUfPfEN4RNfrfswEc"
+    },{
+      "name": "gop10",
+      "owner": "BTS4zs3Wm7WRNBY5GLuFFAhLe3RU4R2Y27WEH1oVQMjeL1k2cEM7K"
+    },{
+      "name": "gop11",
+      "owner": "BTS67Sa6CLXos7doA8C77MYNeYgw4e4eKRNUnYGdiFUwyL9hrmeib"
+    },{
+      "name": "gop12",
+      "owner": "BTS8MGJz8fDsB2P5LtpUf4HL9QdVx2UEGagw6xukXKhYMbTn458v4"
+    },{
+      "name": "gop13",
+      "owner": "BTS5ykoxaRoMERK9LyUZRSJZV7yPyVy5zMbU2386kDXRwpxcqkwoQ"
+    },{
+      "name": "gop14",
+      "owner": "BTS7cfo1gzUsSAWXR2U4UYyUXXgcpi8FsPtSDDwWYwNAbeNeTWv6j"
+    },{
+      "name": "gop15",
+      "owner": "BTS7j65XrGqNJbNYXdM2Awirgrr2Z3Db9mXECJmu4o2gZ6UqQZLVp"
+    },{
+      "name": "gop16",
+      "owner": "BTS4xa988esMFM2xUBJphCeSKM9Vrth7kmhRHNr7F9wHG2aSc97xD"
+    },{
+      "name": "gop17",
+      "owner": "BTS56WbsMq8bPQJy7op37Sgd4VUy7dkwL8W93Zta8dtwPY1QKjQAt"
+    },{
+      "name": "gop18",
+      "owner": "BTS5zSQjY1tegXt5ZL23NWtw3suYFM2TU6PFUVw9aaDeE6ehU9FVz"
+    },{
+      "name": "gop19",
+      "owner": "BTS5Tr7MTieNVFLqxJSxjcy53ct6U1SFGJ3HnH4KX7aYB5HLMNp4C"
+    },{
+      "name": "gop20",
+      "owner": "BTS5h4Wsy75ReWbyKMmsxrEY8bt7feSrYAfomToSG747QGMzHGBLM"
+    },{
+      "name": "gop21",
+      "owner": "BTS7h4m8rXkdLwm335AvEmRym7SxGFSv6WK6RFG7KZ2W3rXhoYVZN"
+    },{
+      "name": "gop22",
+      "owner": "BTS8hoNe8T4uPCKLVrY2FCJZv7paSEELL6pAGumfPwG9AzVSLvAHv"
+    },{
+      "name": "gop23",
+      "owner": "BTS6pmp8spg1LVavkUWxVCvYxEBUabg1wY8tQuFquhpXZ4KYVHFH1"
+    },{
+      "name": "gop24",
+      "owner": "BTS7EccvEYDFGqZqvMFzbPz7vEjdaCgrJw3t1aCBudkpDde6XYbyn"
+    },{
+      "name": "gop25",
+      "owner": "BTS6k8SJoYNexw6jYPY3J1pajNqtDoArL7bAjSnP4GnuRLYiPyPnt"
+    },{
+      "name": "gop26",
+      "owner": "BTS5jfp2LZ3CoRMp8F4Eq245Pog8KuGnkc4emFkKTEipNXiAr2k8T"
+    },{
+      "name": "gop27",
+      "owner": "BTS66Hz3uzniixgBgFas3a29tvuNRXsAm2dDZKvMZzoHxnsnRZJtV"
+    },{
+      "name": "gop28",
+      "owner": "BTS762VH4kDfgt9Msf7XTz5pfHVXt8gKyqVJpBUdZA9wTZm8KT6FV"
+    },{
+      "name": "gop29",
+      "owner": "BTS5WcgaYmz4A3a2wr3kHGXgGUiFVaFKgbV63NKQ2Sev5egvawEU8"
+    },{
+      "name": "gop30",
+      "owner": "BTS76gPLVCbVsS1HBpt5qi2CwZAqnJx3vZ7b1ZyK1TemqbZvdtgLN"
+    },{
+      "name": "gop31",
+      "owner": "BTS6jidbuVPe5mesjequQMW22JHhMLcUWPSM8PUoF4XtGzcu3rEVv"
+    },{
+      "name": "gop32",
+      "owner": "BTS5er1rc7b7qcB2CxfZUDyotVEsKkqaQFEz3UZQjFX2heN4t337h"
+    },{
+      "name": "gop33",
+      "owner": "BTS6eJa16XFGoniVnHopBMtq9g2m2ssVnFu9NyvSfF73v3cNJ8xXC"
+    },{
+      "name": "gop34",
+      "owner": "BTS5nJGr3giAxUAWhjg9wCLMwgE5NGWL22697c9ETpkwstgYMk6P1"
+    },{
+      "name": "gop35",
+      "owner": "BTS7J4EFdLdfWUbDAMGwAJMTZ8jXEhr76nix4a1XRUDGjBAazbxxQ"
+    },{
+      "name": "gop36",
+      "owner": "BTS8eFaNx6B45HjqLZNhBvPDvhi9fWof8RD61759GvJeEkXyzc5VQ"
+    },{
+      "name": "gop37",
+      "owner": "BTS6GCKSdvUrMoWQfrdB5RPANefDwUwAnhUzHsU8W1zmEcUKXU6wm"
+    },{
+      "name": "gop38",
+      "owner": "BTS7dNZExs6qjS1i6R86LEVsEQsFG4hG8m7vanGPEwiDRFNuAJQ99"
+    },{
+      "name": "gop39",
+      "owner": "BTS7TUFVN1PdWhNQpaH7ABwtisLPyEe1RMCVMrJbUmGMgdvyPTiaL"
+    },{
+      "name": "gop40",
+      "owner": "BTS6NKZhepdzs2aAfeM6w5WR1hiCoPvgQu1nQDLpCo6rJi6Kb6ARJ"
+    },{
+      "name": "gop41",
+      "owner": "BTS6JLyefMAn47Py8nm8pyvEHosVKjCaTPtrPo1mzwd8sYg9WuZuG"
+    },{
+      "name": "gop42",
+      "owner": "BTS7t1DJgJRMYTkL8JXWCjvY29UwJ2S8k5XowqGgtc6sQWsxFtmYn"
+    },{
+      "name": "gop43",
+      "owner": "BTS7dd7qzWZ37RFnmWmUenkCSp2fi6esZdELjgcV3wrBMib6wu9sY"
+    },{
+      "name": "gop44",
+      "owner": "BTS4xjTQkfFfHvnF3z8FaYvyuVR7C7qp4T7ox4UqQnJDQcDUnMKr7"
+    },{
+      "name": "gop45",
+      "owner": "BTS5ASpqHnxYAYvRKko7hKaBLfyGHRX8FDWyqunqDUkHXKNKfYNCR"
+    },{
+      "name": "gop46",
+      "owner": "BTS845Rwz1gTPGrH4fgWdDq5Dn8oDThdHuYJ1Q9tmY2mYw6G4c4os"
+    },{
+      "name": "gop47",
+      "owner": "BTS6EhKFAoEQCJNH91Xk1hFY7hw3jaLWHZmMSpdpeDHt1kTaQKLZ6"
+    },{
+      "name": "gop48",
+      "owner": "BTS7V75BCQ3jheE7qxR2Wp2B3GFJJnma3enjHXv2s4qDCnFiNQTX3"
+    },{
+      "name": "gop49",
+      "owner": "BTS835bNW4qSq9b6YnhLjW1DTckZtatJBs78y9bCZA2d5i5n7ASBN"
+    },{
+      "name": "gop50",
+      "owner": "BTS5QPAJZEZWkmpcF3Kfxc5TrkrRSPuJDeNsZmiDZapKxV8qsw9Rb"
+    },{
+      "name": "gop51",
+      "owner": "BTS5hz1XFDCqLdnvB5nLcBve863YgqBSi17Qd1hBSbrSz4znABZvB"
+    },{
+      "name": "gop52",
+      "owner": "BTS7fnjeU2Nn5f7Arz7ggsU6z2wTx62pCCmCHdDqpW6zqKfBNC2Sp"
+    },{
+      "name": "gop53",
+      "owner": "BTS8mmGwq48umpRaiNk4wBUCjbNd6ExmvUQ9ggNfCHyQihNPVJ12Q"
+    },{
+      "name": "gop54",
+      "owner": "BTS6H8WugR9UfAG2ZnzcmwxwjiZrUBe7VfYvXkJffnNA5WsMtvkvw"
+    },{
+      "name": "gop55",
+      "owner": "BTS8Wtpi6yiF2zjXQQaWSTk4qsrbGg7tcCKnbbVUmJuGRsZyTLKSh"
+    },{
+      "name": "gop56",
+      "owner": "BTS4xPPH6fJQ9JDYm5VqHs5SLbfwGkeU9b8YTR23JrZQZxcKj4yaP"
+    },{
+      "name": "gop57",
+      "owner": "BTS8QURep4eRpcru8qMXD1wDXCE5duTcYMG1y9D7Y99ghGLf5SicH"
+    },{
+      "name": "gop58",
+      "owner": "BTS6Zo9WsNYtp6NPPeF8sEdj4H3ntANX2wfQzvn9c4kLyNv3tmGy4"
+    },{
+      "name": "gop59",
+      "owner": "BTS6Ea1XmsEPat9Pu8XHR9xLh4Yq8JPX4w2A67xfx9tgAWiwj6bkR"
+    },{
+      "name": "gop60",
+      "owner": "BTS5zFQjbkqGteQ8LYJJPSFtEfoMjNbemc4sFSG4ar2faUsMiKGU4"
+    },{
+      "name": "gop61",
+      "owner": "BTS66r5qa7cwFrqZRGcQo4fAbVqnFv3T1fyuWP2ht3tyMAzP2kUnA"
+    },{
+      "name": "gop62",
+      "owner": "BTS5YvQeCLq78JERhS2NpxuprXdpiFGokF8J2pHTGPi8mtwWy3Upf"
+    },{
+      "name": "gop63",
+      "owner": "BTS6WP7JNMDdTZYtTmPEdoGF6XX7jzinxPaw53irfG3ywXaHMnTt1"
+    },{
+      "name": "gop64",
+      "owner": "BTS8ea6Q8sLXLQ7J7Q9ZUQTMAPhekcPnZMVQ7MpjqJ44BtzM7uJye"
+    },{
+      "name": "gop65",
+      "owner": "BTS5pMDjABRCczbgmPFkZV4wpNSkEJrBubv3FZMFjeifcwS9ZKKLw"
+    },{
+      "name": "gop66",
+      "owner": "BTS7abxR9au3BgQCrwNuLLUKCufSnmNvmLQkR7naos3M3j3BkdJYW"
+    },{
+      "name": "gop67",
+      "owner": "BTS6Jo2CDUCHqy24jz4gYQTWBVTH2rzu3K5TxAV3UdesAf73Za14x"
+    },{
+      "name": "gop68",
+      "owner": "BTS7feVNhqrc5XTL76Kt8KMaTGq1jA8Z8231BiinKyEnhN38xgAiR"
+    },{
+      "name": "gop69",
+      "owner": "BTS7LCDAMVwD383ZJrseyuhHYUaCjQ9YYVjsiFQU6UDFz2NSpP93B"
+    },{
+      "name": "gop70",
+      "owner": "BTS7jh2qwqKe9PmvmRokPYxcDEty8Z5g5GDjrDtvvtvNiG3Pz1iGe"
+    },{
+      "name": "gop71",
+      "owner": "BTS7eoLe4WgfWcCRoQrdk47FhFvND1LrBeYxYU2ogFQDd8v2x7gcW"
+    },{
+      "name": "gop72",
+      "owner": "BTS684iwTJYH2zWN9SgDcBTXZ6PShwdrhiCkpsh4TCmt6NZ8Zxq8K"
+    },{
+      "name": "gop73",
+      "owner": "BTS8BeJ1HGESpmrLgppBv93yeGBAo4RyWfVKm72WjWvyeiQKWJYCm"
+    },{
+      "name": "gop74",
+      "owner": "BTS5FKqt7P3ePSkWV4mMuwth4XEEon3yYDQGqQtkvZjeYpCsdhkoh"
+    },{
+      "name": "gop75",
+      "owner": "BTS73aLxfMXAp1E7mxW1wn3VhJrTino8KGUrGkXc6nd49pVLSr1Kq"
+    },{
+      "name": "gop76",
+      "owner": "BTS6TFSAqzeiCiSTGrzZ6YYwwyi5RD7Ev7w4rhq7P11HwtxQB5ts6"
+    },{
+      "name": "gop77",
+      "owner": "BTS5aYr8TMDf5b9i7gPboFpun3uL5axuB5iy9pPuSa66zP69qTwjH"
+    },{
+      "name": "gop78",
+      "owner": "BTS8hGKdroykHomibxZimCnrYBDUq95qiz61h6EbHn1zdvdCndMup"
+    },{
+      "name": "gop79",
+      "owner": "BTS5sdbdtt4x7yv8KLXFbVc4npckxwv9MHfw55n36edkHm4hNqtz2"
+    },{
+      "name": "gop80",
+      "owner": "BTS4zB9pvrv6ubX4yuzTgwPjbUTmbxsstboT6MjmFWFqmWuDYjRQt"
+    },{
+      "name": "gop81",
+      "owner": "BTS6Rh81GcnTyY9z6Pm55LC7XVmfYP988qRxkNRg9S427Cm69UVWS"
+    },{
+      "name": "gop82",
+      "owner": "BTS8PwAj14fg9qRXHouXiR8TUC4MKiX8kxeNMrzqyqqN2iudfJoaa"
+    },{
+      "name": "gop83",
+      "owner": "BTS8Cu8atj79XwHpcuq5ypzFWj3pFsdt2J2sBDAjRTuhrgpWX9Lyw"
+    },{
+      "name": "gop84",
+      "owner": "BTS76KiPhCyoQGdsKyXBen7R63rUbFxqaS5SuPVU5WP8AKyaJg5D6"
+    },{
+      "name": "gop85",
+      "owner": "BTS6aYT4xFXTJgoH8psydDtghkq4Ufj7ezBj3zUe1qoPZuz3homtt"
+    },{
+      "name": "gop86",
+      "owner": "BTS8b8eUdcqB5JkYqK2gLQdUi5RJhpSpkiGbpaUVaZaub1m8kci4f"
+    },{
+      "name": "gop87",
+      "owner": "BTS7WointBeACc76bGZH8aTiwKhwGsxWt6WNaVYmD4uQ6eLAm8vpQ"
+    },{
+      "name": "gop88",
+      "owner": "BTS72a1QrmRpJsECBJxSQtzwVyTgZP7QNH9FbEX8srPAxLqtwX1SE"
+    },{
+      "name": "gop89",
+      "owner": "BTS5xcUohpkQZ3YKnA2SpqQ2KTQcnBED1zRJPn95gnN67VqwQ7tB8"
+    },{
+      "name": "gop90",
+      "owner": "BTS66YdupirFQfy93SB6b54FZQ3qcqS4fDre4TV2Zqxpktx1hyqdM"
+    },{
+      "name": "gop91",
+      "owner": "BTS72sm9r6D7AaGZvx1xApabzstXtHCxHJC6TMgShjXChEpCpks8L"
+    },{
+      "name": "gop92",
+      "owner": "BTS58mF324MrKzTMUvKaQsnWq6PzJanesKogYXDJC6bf7MV7eCs9u"
+    },{
+      "name": "gop93",
+      "owner": "BTS7JRKtrSgacd27PNNEdQdbi58V7QP8QDnSTjBVfA5Ucps38gios"
+    },{
+      "name": "gop94",
+      "owner": "BTS4xEAyunc98EAJnToBQEgymRkwgyDFYsFpZdcS3L56AzednADFL"
+    },{
+      "name": "gop95",
+      "owner": "BTS798pzemWJNHoXGciad2Sy8vhPQziMYeBoDHZtyk4wYXmaff5yy"
+    },{
+      "name": "gop96",
+      "owner": "BTS7gnEY2DkhKucTUHN9vMsSi3B1gd6bCyk4XcKWZMs1jyJie6NpL"
+    },{
+      "name": "gop97",
+      "owner": "BTS7VrPkm7RDhGvVCQUXNdFckZnZECUq6wuugmyfjnwwQu9qrBxRQ"
+    },{
+      "name": "gop98",
+      "owner": "BTS7NnBbXKKZdmqEoNTyHFNjRPKjeYHotaM6txecKYf86BrcjKGmX"
+    }
+  ],
+  "initial_balances": [{
+      "raw_address": "BTSK85LKoXrLagB9YC3xwHJZR2hTXD1Lygxn",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSAF8oBwq8E79FFtjhhywmRXdieu5jJv9FR",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTS34fJSn6Rdd8g7izVPCtYHHPksgYLT8bxy",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSHSpsrymWvncPNrx9F9Co2N1iayhPdN5Ym",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTS6qgrfanqgoGJtfCtTbgLRyeHB2BEvFc3j",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSLh6MSYcRJ1QqbENwXk53pumzdtxYLMSY9",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSQHQ5hdkmD49M3xZEyEsb2d3Po4xhxXhnQ",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSY6ZNgVuY3P6b85xoTrGiVJtGC1DLs2xF",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTS6zfJ3keK6fRafFgdmrpoeRWvNYfcR9PtG",
+      "balance": 1000000000000
+    },{
+      "raw_address": "BTSPA2xb2gbVKJPyTnDwxcJVp2tLMrwnyYk",
+      "balance": 1000000000000
+    }
+  ],
+  "sharedrop_balances": {
+    "start_time": "1970-01-01T00:00:00",
+    "duration_days": 0,
+    "vesting_balances": []
+  }
+}

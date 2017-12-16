@@ -1,0 +1,61 @@
+(wallet closed) >>> help blockchain_get_asset
+Usage:
+blockchain_get_asset <asset>                                                                          Retrieves the record for the given asset ticker symbol or ID
+Retrieves the record for the given asset ticker symbol or ID
+
+Parameters:
+  asset (string, required): asset ticker symbol or ID to retrieve
+
+Returns:
+  optional_asset_record
+
+aliases: get_asset
+(wallet closed) >>> blockchain_get_asset XTS
+{
+  "id": 0,
+  "symbol": "XTS",
+  "issuer_id": 0,
+  "authority": {
+    "required": 1,
+    "owners": []
+  },
+  "authority_flag_permissions": 0,
+  "active_flags": 0,
+  "whitelist": [],
+  "name": "BitShares XTS",
+  "description": "BitShares Test Network",
+  "public_data": null,
+  "precision": 100000,
+  "max_supply": 1000000000000000,
+  "withdrawal_fee": 0,
+  "market_fee_rate": 0,
+  "collected_fees": 0,
+  "current_supply": 199999999999901,
+  "registration_date": "2014-06-20T14:40:27",
+  "last_update": "2014-06-20T14:40:27"
+}
+(wallet closed) >>> blockchain_get_asset 0
+{
+  "id": 0,
+  "symbol": "XTS",
+  "issuer_id": 0,
+  "authority": {
+    "required": 1,
+    "owners": []
+  },
+  "authority_flag_permissions": 0,
+  "active_flags": 0,
+  "whitelist": [],
+  "name": "BitShares XTS",
+  "description": "BitShares Test Network",
+  "public_data": null,
+  "precision": 100000,
+  "max_supply": 1000000000000000,
+  "withdrawal_fee": 0,
+  "market_fee_rate": 0,
+  "collected_fees": 0,
+  "current_supply": 199999999999901,
+  "registration_date": "2014-06-20T14:40:27",
+  "last_update": "2014-06-20T14:40:27"
+}
+(wallet closed) >>> quit

@@ -1,0 +1,14 @@
+#include <stdint.h>
+#include <ohl/utilities/git_revision.hpp>
+
+#define OHLSHARES_GIT_REVISION_SHA "@BITSHARES_GIT_REVISION_SHA@"
+#define OHLSHARES_GIT_REVISION_UNIX_TIMESTAMP @BITSHARES_GIT_REVISION_UNIX_TIMESTAMP@
+#define OHLSHARES_GIT_REVISION_DESCRIPTION "@BITSHARES_GIT_REVISION_DESCRIPTION@"
+
+namespace ohl { namespace utilities {
+
+const char* const git_revision_sha = OHLSHARES_GIT_REVISION_SHA;
+const uint32_t git_revision_unix_timestamp = OHLSHARES_GIT_REVISION_UNIX_TIMESTAMP;
+const char* const git_revision_description = OHLSHARES_GIT_REVISION_DESCRIPTION;
+
+} } // end namespace ohl::utilities

@@ -1,0 +1,220 @@
+default (unlocked) >>> wallet_account_balance delegate0
+ACCOUNT                         BALANCE                     
+============================================================
+delegate0                       19,801,980.19801 XTS        
+default (unlocked) >>> wallet_account_create sender
+"XTS6cVReASHH3E4bqzjaubRaVXJYUXegRFzxmFvsD8AwCPf1dkhra"
+default (unlocked) >>> wallet_account_create receiver
+"XTS5DBeMtFiZaive82nTRuZjBbfZMVFZbudCs86bDfh3XwkKSdUqw"
+default (unlocked) >>> wallet_account_create agent
+"XTS5W4ayhoWynsujeA8BZ1vMo3MXkTwpmegf3qVdtjzBUpo5DAxqi"
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_account_register sender delegate0
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+<d-ign>2014-06-20T14:40:40</d-ign>PENDING   delegate0           sender              0.00000 XTS             register sender                             0.50000 XTS         <d-ign> b17c3f36</d-ign>
+default (unlocked) >>> wallet_account_register receiver delegate0
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+<d-ign>2014-06-20T14:40:40</d-ign>PENDING   delegate0           receiver            0.00000 XTS             register receiver                           0.50000 XTS         <d-ign> 42a4e1be</d-ign>
+default (unlocked) >>> wallet_account_register agent delegate0
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+<d-ign>2014-06-20T14:40:40</d-ign>PENDING   delegate0           agent               0.00000 XTS             register agent                              0.50000 XTS         <d-ign> 12d329ef</d-ign>
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_transfer 10000 XTS delegate0 sender
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+<d-ign>2014-06-20T14:40:50</d-ign>PENDING   delegate0           sender              10,000.00000 XTS                                                    0.50000 XTS         <d-ign> f1ab5ef6</d-ign>
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> balance delegate0
+ACCOUNT                         BALANCE                     
+============================================================
+delegate0                       19,791,978.19801 XTS        
+default (unlocked) >>> balance sender
+ACCOUNT                         BALANCE                     
+============================================================
+sender                          10,000.00000 XTS            
+default (unlocked) >>> balance agent
+No balances found.
+default (unlocked) >>> balance receiver
+No balances found.
+default (unlocked) >>> wallet_transfer_from_with_escrow  1000 XTS sender sender receiver agent "5100000000000000000000000000000000000000000000000000000000000005" "my memo"
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+<d-ign>2014-06-20T14:41:00</d-ign>PENDING   sender as sender    receiver            1,000.00000 XTS         my memo                                     0.50000 XTS         <d-ign> 1f7cb0f1</d-ign>
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_escrow_summary sender
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 100000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> wallet_escrow_summary receiver
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 100000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> wallet_escrow_summary agent
+[]
+default (unlocked) >>> wallet_escrow_summary delegate0
+[]
+default (unlocked) >>> wallet_release_escrow sender XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3 sender 0 200 
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_escrow_summary sender
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 80000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> wallet_escrow_summary receiver
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 80000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> balance receiver
+ACCOUNT                         BALANCE                     
+============================================================
+receiver                        200.00000 XTS               
+default (unlocked) >>> balance sender
+ACCOUNT                         BALANCE                     
+============================================================
+sender                          8,999.00000 XTS             
+default (unlocked) >>> wallet_release_escrow receiver XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3 receiver 100 0 
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_escrow_summary sender
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 70000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> wallet_escrow_summary receiver
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 70000000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> balance receiver
+ACCOUNT                         BALANCE                     
+============================================================
+receiver                        199.50000 XTS               
+default (unlocked) >>> balance sender
+ACCOUNT                         BALANCE                     
+============================================================
+sender                          9,099.00000 XTS             
+default (unlocked) >>> wallet_release_escrow delegate0 XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3 agent 222 111 
+TIMESTAMP           BLOCK     FROM                TO                  AMOUNT                  MEMO                                        FEE                 ID      
+======================================================================================================================================================================
+default (unlocked) >>> debug_advance_time 1 blocks
+OK
+default (unlocked) >>> debug_wait 4
+OK
+default (unlocked) >>> wallet_escrow_summary sender
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 36700000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> wallet_escrow_summary receiver
+[{
+    "creating_transaction_id": "1f7cb0f11975a5f1b57adc621b68ad0bf8820d4b",
+    "balance_id": "XTSKrhkPnQToEZfF4JXDztmKbFURpvwxVdA3",
+    "balance": {
+      "amount": 36700000,
+      "asset_id": 0
+    },
+    "sender_account_name": "sender",
+    "receiver_account_name": "receiver",
+    "escrow_agent_account_name": "agent",
+    "agreement_digest": "5100000000000000000000000000000000000000000000000000000000000005"
+  }
+]
+default (unlocked) >>> balance receiver
+ACCOUNT                         BALANCE                     
+============================================================
+receiver                        310.50000 XTS               
+default (unlocked) >>> balance sender
+ACCOUNT                         BALANCE                     
+============================================================
+sender                          9,321.00000 XTS             
+default (unlocked) >>> quit

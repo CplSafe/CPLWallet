@@ -1,0 +1,29 @@
+<div class="col-sm-12">
+  <div class="header">
+    <h3 class="header-title" translate>account.new_account</h3>
+  </div>
+</div>
+
+<div class="container1">
+  <div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2 avatar-150-min-width">
+      <div class="avatar-150 text-center">
+        <identicon account="{{f.name}}" size="150" tooltip="Your identicon is a security feature that helps you verify account names visually"/>
+      </div>
+    </div>
+
+    <div class="col-sm-5">
+      <form name="createaccount" role="form" ng-submit="createAccount()" novalidate>
+        <div form-vgroup label="{{'account.name'|translate}}" help="{{'directive.input_name.note2'|translate}} {{'directive.input_name.note1'|translate}}" help-if="true">
+          <input-account-name name="account_name" autofocus ng-model="f.name" />
+        </div>
+          <div ng-show="!f.fully_synced" class="wallet-sync-warning text-warning">The wallet needs to be fully synchronized with the blockchain in order to create an account. Please be patient.</div>
+          <button ng-disabled="!createaccount.$valid || !f.fully_synced" class="btn btn-primary" type="submit" translate>accounts.add_account</button>
+      </form>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,268 @@
+{
+  "category": "Debugging Methods",
+  "methods" :
+    [
+      {
+        "method_name": "debug_start_simulated_time",
+        "description": "Begin using simulated time for testing",
+        "return_type": "void",
+        "parameters" : [
+            {
+              "name" : "new_simulated_time",
+              "type" : "timestamp",
+              "description" : "The simulated time to start with"
+            }
+        ],
+        "is_const" : false,
+        "prerequisites" : ["json_authenticated"],
+        "cached"  : false,
+        "aliases" : ["start_simulated_time"]
+      },
+      {
+        "method_name": "debug_advance_time",
+        "description": "Advance simulated time",
+        "return_type": "void",
+        "parameters" : [
+            {
+              "name" : "delta_time_seconds",
+              "type" : "int32_t",
+              "description" : "How far in the future to advance the time"
+            },
+            {
+              "name" : "unit",
+              "type" : "string",
+              "description" : "The unit of time (\"seconds\", \"blocks\", or \"rounds\")",
+              "default_value" : "seconds"
+            }
+        ],
+        "is_const" : false,
+        "cached"  : false,
+        "prerequisites" : ["json_authenticated"],
+        "aliases" : ["advance_time"]
+      },
+      {
+        "method_name": "debug_trap",
+        "description": "Break into debugger (UNIX: SIGINT, win32: __debugbreak)",
+        "return_type": "void",
+        "parameters" : [
+            {
+              "name" : "block_number",
+              "type" : "uint32_t",
+              "description" : "Delay trap until we start to process the given blocknum"
+            }
+        ],
+        "is_const" : false,
+        "cached"  : false,
+        "prerequisites" : ["json_authenticated"],
+        "aliases" : []
+      },
+      {
+        "method_name": "debug_wait",
+        "description": "wait for specified amount of time",
+        "return_type": "void",
+        "parameters" :
+          [
+            {
+              "name" : "wait_time",
+              "type" : "uint32_t",
+              "description" : "time in seconds to wait before accepting more input"
+            }
+          ],
+        "is_const"   : true,
+        "cached"  : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases" : ["wait"]
+      },
+      {
+        "method_name": "debug_wait_for_block_by_number",
+        "description": "Don't return until the specified block has arrived",
+        "return_type": "void",
+        "parameters" : [
+            {
+              "name" : "block_number",
+              "type" : "uint32_t",
+              "description" : "The block number (or offset) to wait for"
+            },
+            {
+              "name" : "type",
+              "type" : "string",
+              "description" : "Whether to wait for an \"absolute\" block number, or a count of blocks \"relative\" to the current block number",
+              "default_value" : "absolute"
+            }
+        ],
+        "is_const" : false,
+        "cached"  : false,
+        "prerequisites" : ["json_authenticated"],
+        "aliases" : ["wait_for_block_by_number"]
+      },
+      {
+        "method_name": "debug_wait_block_interval",
+        "description": "wait for n block intervals",
+        "return_type": "void",
+        "parameters" :
+          [
+            {
+              "name" : "wait_time_in_block_intervals",
+              "type" : "uint32_t",
+              "description" : "time in block intervals to wait before accepting more input"
+            }
+          ],
+        "is_const"   : true,
+        "cached"  : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases" : ["wait_block_interval"]
+      },
+      {
+        "method_name": "debug_enable_output",
+        "description": "enables or disables output from the CLI",
+        "return_type": "void",
+        "parameters" :
+          [
+            {
+              "name" : "enable_flag",
+              "type" : "bool",
+              "description" : "true to enable output, false to disable it"
+            }
+          ],
+        "is_const"   : false,
+        "cached"  : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases" : ["enable_output"]
+      },
+      {
+        "method_name": "debug_filter_output_for_tests",
+        "description": "prevents printing any times or other unpredictable data",
+        "return_type": "void",
+        "parameters" :
+          [
+            {
+              "name" : "enable_flag",
+              "type" : "bool",
+              "description" : "true to enable filtering, false to disable it"
+            }
+          ],
+        "is_const"   : false,
+        "cached"  : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases" : ["filter_output_for_tests"]
+      },
+      {
+        "method_name" : "debug_update_logging_config",
+        "description" : "updates logging configuration (level, etc) based on settings in config.json",
+        "return_type" : "void",
+        "parameters"  : [],
+        "aliases"     : [],
+        "prerequisites" : ["no_prerequisites"]
+      },
+      {
+        "method_name": "debug_get_call_statistics",
+        "description": "Returns call timings for node_delegate callbacks",
+        "return_type": "json_object",
+        "parameters" : [],
+        "is_const"   : true,
+        "prerequisites" : ["no_prerequisites"]
+      },
+      {
+        "method_name": "debug_get_client_name",
+        "description": "Returns client's debug name specified in config.json",
+        "return_type": "string",
+        "parameters" : [],
+        "is_const"   : true,
+        "prerequisites" : ["no_prerequisites"]
+      },
+      {
+        "method_name": "debug_deterministic_private_keys",
+        "description": "Generate/import deterministically generated private keys",
+        "return_type": "variants",
+        "parameters" : [
+          {
+            "name" : "start",
+            "description" : "the number of the first key, or -1 to suppress suffix",
+            "type" : "int32_t",
+            "default_value" : "-1"
+          },
+          {
+            "name" : "count",
+            "description" : "the number of keys to generate",
+            "type" : "int32_t",
+            "default_value" : "1"
+          },
+          {
+            "name" : "prefix",
+            "description" : "a string prefix added to the seed used to generate keys",
+            "type" : "string",
+            "default_value" : ""
+          },
+          {
+            "name" : "import",
+            "description" : "whether to import generated keys",
+            "type" : "bool",
+            "default_value" : "false"
+          },
+          {
+            "name" : "account_name",
+            "type" : "account_name",
+            "description" : "the name of the account the key should be imported into, if null then the key must belong to an active account",
+            "default_value" : null
+          },
+          {
+            "name" : "create_new_account",
+            "type" : "bool",
+            "description" : "If true, the wallet will attempt to create a new account for the name provided rather than import the key into an existing account",
+            "default_value" : false
+          },
+          {
+            "name" : "rescan",
+            "type" : "bool",
+            "description" : "If true, the wallet will rescan the blockchain looking for transactions that involve this private key",
+            "default_value" : false
+          }
+        ],
+        "prerequisites" : ["wallet_unlocked"],
+        "aliases" : []
+      },
+      {
+        "method_name": "debug_stop_before_block",
+        "description": "stop before given block number",
+        "return_type": "void",
+        "parameters" : [
+            {
+              "name" : "block_number",
+              "type" : "uint32_t",
+              "description" : "The block number to stop before"
+            }
+        ],
+        "is_const" : false,
+        "cached"  : false,
+        "prerequisites" : ["json_authenticated"],
+        "aliases" : ["stop_before_block", "stop_b4_block", "debug_stop_b4_block", "stop_before", "stop_b4", "stopb4"]
+      },
+      {
+        "method_name": "debug_verify_market_matching",
+        "description": "enables or disables (slow) market matching verification code",
+        "return_type": "void",
+        "parameters" :
+          [
+            {
+              "name" : "enable_flag",
+              "type" : "bool",
+              "description" : "true to enable checking, false to disable it"
+            }
+          ],
+        "is_const" : false,
+        "cached"   : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases"  : []
+      },
+      {
+        "method_name" : "debug_list_matching_errors",
+        "description" : "returns a list of blocks flagged by debug_verify_market_matching",
+        "return_type" : "variants",
+        "parameters"  : [],
+        "is_const"   : true,
+        "cached"  : false,
+        "prerequisites" : ["no_prerequisites"],
+        "aliases" : []
+      }
+    ]
+}
